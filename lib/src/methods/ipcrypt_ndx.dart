@@ -29,7 +29,7 @@ class IpCryptExtendedNonDeterministic {
     }
     final Uint8List plaintext = ipToBytes(ip);
     final Uint8List ciphertext = encryptBlockXts(key, tweak_, plaintext);
-    return (BytesBuilder(copy: true)
+    return (BytesBuilder()
           ..add(tweak_)
           ..add(ciphertext))
         .toBytes();

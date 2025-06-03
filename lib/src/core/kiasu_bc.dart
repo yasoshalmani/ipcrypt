@@ -366,7 +366,7 @@ Uint8List encryptBlockKiasuBc(
   // Pad tweak and expand key.
   final Uint8List paddedTweak = padTweak(tweak);
   final Uint8List expandedKey = expandKey(key);
-  final Uint8List state = Uint8List.fromList(block);
+  final Uint8List state = Uint8List.fromList(block); // make a copy.
 
   // Initial round.
   for (int i = 0; i < 16; i++) {
@@ -402,7 +402,7 @@ Uint8List decryptBlockKiasuBc(
   // Pad tweak and expand key.
   final Uint8List paddedTweak = padTweak(tweak);
   final Uint8List expandedKey = expandKey(key);
-  final Uint8List state = Uint8List.fromList(block);
+  final Uint8List state = Uint8List.fromList(block); // make a copy.
 
   // Initial round.
   for (int i = 0; i < 16; i++) {

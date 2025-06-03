@@ -127,4 +127,4 @@ Uint8List hexStringToBytes(final String hexString) {
 /// Convert bytes in big-endian order to hex string.
 String bytesToHexString(final Uint8List bytes) => bytes
     .map((final int byte) => byte.toRadixString(16).padLeft(2, '0'))
-    .join('');
+    .join();

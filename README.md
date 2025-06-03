@@ -28,7 +28,6 @@ See [example/ipcrypt.dart](example/ipcrypt.dart).
 import 'dart:typed_data';
 
 import 'package:ipcrypt/ipcrypt.dart';
-import 'package:ipcrypt/src/core/utils.dart';
 
 enum Method { deterministic, nonDeterministic, extendedNonDeterministic }
 

@@ -45,6 +45,26 @@ void main() {
         ),
         '2001:db8::1',
       );
+      expect(
+        bytesToIp(
+          Uint8List.fromList([
+            0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+            0xab, 0xcd, 0x12, 0x34, 0x56, 0x78, 0x9a, 0xbc,
+            //
+          ]),
+        ),
+        '::abcd:1234:5678:9abc',
+      );
+      expect(
+        bytesToIp(
+          Uint8List.fromList([
+            0xfd, 0x00, 0x12, 0x34, 0x56, 0x78, 0x9a, 0xbc,
+            0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+            //
+          ]),
+        ),
+        'fd00:1234:5678:9abc::',
+      );
     });
     test('Invalid input', () {
       expect(

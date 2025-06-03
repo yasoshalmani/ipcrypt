@@ -15,4 +15,5 @@
 /// for increased security.
 library;
 
+export 'src/core/utils.dart';
 export 'src/ipcrypt_base.dart';

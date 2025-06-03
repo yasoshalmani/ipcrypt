@@ -1,7 +1,6 @@
 import 'dart:typed_data';
 
 import 'package:ipcrypt/ipcrypt.dart';
-import 'package:ipcrypt/src/core/utils.dart';
 import 'package:ipcrypt/src/methods/ipcrypt_nd.dart';
 import 'package:test/test.dart';
 import 'test_vectors.dart';
